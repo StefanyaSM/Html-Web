@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs datos personales</title>
+
+    <link rel="stylesheet"
+          href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <style>
+        .panel.with-nav-tabs .panel-heading{
+            padding:5px 5px 0 5px;
+        }
+        .panel.with-nav-tabs .nav-tabs{
+            border-bottom:none;
+        }
+		
+		.container{
+		margin-top:100px;
+		}
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row">
+
+	<!-- AZUL -->
+	<div class="col-md-6 col-md-offset-3">
+	     <div class="panel with-nav-tabs panel-info">
+
+	       <div class="panel-heading">
+	         <ul class="nav nav-tabs">
+	           <li class="active"><a href="#tab1info" data-toggle="tab">Nombre</a></li>
+			
+	           <li><a href="#tab2info" data-toggle="tab">Correo</a></li>
+	           <li><a href="#tab3info" data-toggle="tab">GitHub</a></li>
+	         </ul>
+	       </div>
+		
+        <div class="panel-body">
+          <div class="tab-content">
+			<div class="tab-pane fade in active" id="tab1info" th:text="${user.name}"></div>
+			<div class="tab-pane fade" id="tab2info" th:text="${user.email}"></div>
+			<div class="tab-pane fade" id="tab3info" th:text="${user.github}"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+	
+	
+	
+	<!-- ROJO -->
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel with-nav-tabs panel-danger">
+
+        <div class="panel-heading">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1danger" data-toggle="tab">Nombre</a></li>
+            <li><a href="#tab2danger" data-toggle="tab">Correo</a></li>
+            <li><a href="#tab3danger" data-toggle="tab">GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="panel-body">
+          <div class="tab-content">
+			<div class="tab-pane fade in active" id="tab1info" th:text="${user.name}"></div>
+			<div class="tab-pane fade" id="tab2info" th:text="${user.email}"></div>
+			<div class="tab-pane fade" id="tab3info" th:text="${user.github}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+
